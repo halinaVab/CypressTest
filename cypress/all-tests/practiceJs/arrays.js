@@ -14,7 +14,7 @@ describe('arrays ', () => {
 		printPlanets(planets);
 	});
 
-	it('Add property', () => {
+	it('Add property to planets', () => {
 		planets.map(function (planet) {
 			return (planet.solarSystem = true);
 		});
