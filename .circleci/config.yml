@@ -16,11 +16,11 @@ jobs:
     - start_tests_step
 
 
-command:
+commands:
 
-start_tests_step:
- description: Start tests
-    steps:
+ start_tests_step:
+  description: Start tests
+  steps:
             - run:
                 name: Start tests
                 command: |
