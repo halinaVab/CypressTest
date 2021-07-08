@@ -10,11 +10,12 @@ describe('arrays ', () => {
 		{ planet: 'Neptune', radius: 24764, density: 1.64, distance: 30.07 },
 	];
 
-	it('Print Planets', () => {
+	it('Print Planets C1', () => {
+		cy.log("Test");
 		printPlanets(planets);
 	});
 
-	it('Add property', () => {
+	it('Add property to planets', () => {
 		planets.map(function (planet) {
 			return (planet.solarSystem = true);
 		});
