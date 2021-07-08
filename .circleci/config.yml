@@ -24,5 +24,5 @@ start_tests_step:
             - run:
                 name: Start tests
                 command: |
-                  npx cypress run --record --key 0d167392-db2d-44e0-931e-27f7dc0c6f9e --browser chrome
+                  npx cypress run --config-file cypress_amazon.json --record --key 11595e38-7dce-415e-93e1-bcf5ab1ef0f9 --spec 'cypress/integration/amazonTests/**.*' --browser chrome
  

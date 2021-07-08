@@ -1,0 +1,22 @@
+{
+  "specName": "search.spec.js",
+  "title": "Test amazon Search",
+  "suiteName": "Amazon tests",
+  "testId": "r3",
+  "testName": "Amazon tests Test amazon Search",
+  "testError": "The chainer `be` is a language chainer provided to improve the readability of your assertions, not an actual assertion. Please provide a valid assertion.\n\nhttps://on.cypress.io/assertions",
+  "testCommands": [
+    "get #twotabsearchtextbox",
+    "type Iphone",
+    "get #nav-search-submit-button",
+    "click ",
+    "form sub --submitting form--",
+    "xhr  GET https://completion.amazon.com/api/2017/suggestions?session-id=142-3914570-3519439&customer-id=&request-id=WNGN7W03Z4GFVESN5EYK&page-type=Gateway&lop=en_US&site-variant=desktop&client-info=amazon-search-ui&mid=ATVPDKIKX0DER&alias=aps&b2b=0&fresh=0&ks=69&prefix=Iphone&event=onKeyPress&limit=11&fb=1&suggestion-type=KEYWORD&suggestion-type=WIDGET&_=1625751327663",
+    "page load --waiting for new page to load--",
+    "new url https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=Iphone",
+    "new url https://www.amazon.com/s?k=Iphone&ref=nb_sb_noss",
+    "xhr  GET https://completion.amazon.com/api/2017/suggestions?session-id=142-3914570-3519439&customer-id=&request-id=GK2AFMJXJRQX5XPBT89X&page-type=Search&lop=en_US&site-variant=desktop&client-info=amazon-search-ui&mid=ATVPDKIKX0DER&alias=aps&searchTerm=a&suggestion-type=KEYWORD&suggestion-type=WIDGET&_=1625751329235",
+    "xhr  get https://www.amazon.com/gp/aq-feedback/lazyLoad/handler/af-link-handler.html?pl={\"adCreativeMetaData\":{\"adCreativeId\":\"\",\"adId\":\"6153696030601\",\"campaignId\":\"4685183210501\",\"adImpressionId\":\"\",\"adNetwork\":\"aax\",\"adProgramId\":1010},\"adPlacementMetaData\":{\"adElementId\":\"MultiBrandCreativeDesktop\",\"pageType\":\"Search\",\"pageUrl\":\"\",\"searchTerms\":\"SXBob25l\",\"slotName\":\"desktop-hsa-3psl\"}}",
+    "should be, visible"
+  ]
+}

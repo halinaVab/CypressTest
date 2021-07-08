@@ -1,0 +1,9 @@
+{
+  "specName": "search.spec.js",
+  "title": "Test amazon Search",
+  "suiteName": "Test for regres",
+  "testId": "r3",
+  "testName": "Test for regres Test amazon Search",
+  "testError": "cy.xpath is not a function",
+  "testCommands": []
+}

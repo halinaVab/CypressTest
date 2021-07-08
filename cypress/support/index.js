@@ -17,6 +17,7 @@
 import "./commands";
 
 require('cypress-failed-log');
+require('cypress-xpath')
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
