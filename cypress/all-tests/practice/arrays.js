@@ -22,7 +22,7 @@ describe('arrays ', () => {
 		printPlanets(planets);
 	});
 
-	it('Add object to array', () => {
+	it('Add object to array new test', () => {
 		planets.push({
 			planet: 'SomeNewPlanet',
 			radius: 24764,
