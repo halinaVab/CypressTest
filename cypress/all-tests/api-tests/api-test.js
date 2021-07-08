@@ -40,7 +40,7 @@ describe('Test for regres', () => {
 		});
 	});
 
-	it('Negative:Create user', () => {
+	it('Negative:Create user C2', () => {
 		cy.fixture('user').then((user) => {
 			cy.request({
 				method: 'POST',

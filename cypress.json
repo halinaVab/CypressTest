@@ -1,5 +1,13 @@
 {
   "projectId": "72t1o8",
   "integrationFolder": "cypress/all-tests",
-  "baseUrl": "https://reqres.in"
+  "baseUrl": "https://reqres.in",
+  "reporter": "cypress-testrail-logs-screenshots",
+  "reporterOptions": {
+    "domain": "galinatest.testrail.io",
+    "username": "galinavab2802@gmail.com",
+    "password": "Bazzinga19",
+    "projectId": 2,
+    "active": false
+  }
 }
