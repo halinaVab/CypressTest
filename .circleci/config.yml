@@ -8,7 +8,7 @@ workflows:
           name: Production tests
           record: true
           spec: cypress/integration/amazonTests/*
-            filters:
+          filters:
               branches:
                 only:
                   - circleciintegration
