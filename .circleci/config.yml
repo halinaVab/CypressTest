@@ -8,6 +8,7 @@ workflows:
           name: Production tests
           record: true
           spec: cypress/integration/amazonTests/*
+          config-file: cypress_amazon.json
           filters:
               branches:
                 only:
