@@ -7,7 +7,7 @@ workflows:
       - cypress/run:
           name: Production tests
           record: true
-            spec: cypress/integration/prod/*
+            spec: cypress/integration/amazonTests/*
             filters:
               branches:
                 only:
