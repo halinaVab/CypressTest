@@ -1,12 +1,4 @@
 {
   "projectId": "72t1o8",
-  "baseUrl": "https://reqres.in",
-  "reporter": "cypress-testrail-logs-screenshots",
-  "reporterOptions": {
-    "domain": "galinatest.testrail.io",
-    "username": "galinavab2802@gmail.com",
-    "password": "Bazzinga19",
-    "projectId": 2,
-    "active": false
-  }
+  "baseUrl": "https://reqres.in"
 }
