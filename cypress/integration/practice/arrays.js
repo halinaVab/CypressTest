@@ -11,7 +11,7 @@ describe('arrays ', () => {
 	];
 
 	it('Print Planets C1', () => {
-		cy.log("Test");
+		cy.log('Test');
 		printPlanets(planets);
 	});
 
@@ -42,10 +42,7 @@ describe('arrays ', () => {
 	});
 
 	it('Remove by indexOf', () => {
-		planets.splice(
-			planets.map((planet) => planet.planet).indexOf('SomeNewPlanet'),
-			1
-		);
+		planets.splice(planets.map(planet => planet.planet).indexOf('SomeNewPlanet'), 1);
 		printPlanets(planets);
 	});
 
@@ -78,16 +75,16 @@ describe('arrays ', () => {
 	}
 
 	function printPlanets(planets) {
-		planets.forEach((planet) => {
+		planets.forEach(planet => {
 			cy.log(
 				Object.keys(planet)
-					.map((key) => key + ':' + planet[key])
+					.map(key => key + ':' + planet[key])
 					.join(', ')
 			);
 		});
 	}
 
 	function getPlanetsWithDistance(planets, number) {
-		return planets.filter((planet) => planet.density > 5);
+		return planets.filter(planet => planet.density > 5);
 	}
 });
