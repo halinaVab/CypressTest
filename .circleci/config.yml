@@ -1,0 +1,15 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
+workflows:
+  build:
+    jobs:
+      - cypress/run:
+          name: Production tests
+          spec: cypress/integration/amazonTests/*
+          config-file: cypress_amazon.json
+          record: true
+          filters:
+              branches:
+                only:
+                  - circleciintegration
