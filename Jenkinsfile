@@ -13,12 +13,12 @@ pipeline {
                 // will use Cypress Dashboard to load balance any found spec files
                 stage('Run tests in parallel A') {
                     steps {
-                        bat 'npx cypress run --record --key 796f0713-2f6e-4650-b445-d43b7fecd62b --parallel'
+                        bat 'npx cypress run --record --key 0d167392-db2d-44e0-931e-27f7dc0c6f9e --parallel'
                     }
                 }
                 stage('Run tests in parallel B') {
                     steps {
-                        bat 'npx cypress run --record --key 796f0713-2f6e-4650-b445-d43b7fecd62b --parallel'
+                        bat 'npx cypress run --record --key 0d167392-db2d-44e0-931e-27f7dc0c6f9e --parallel'
                     }
                 }
             }
