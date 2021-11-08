@@ -1,7 +1,7 @@
 class SearchResultPage{
 
     isOnSerachResultPage(){
-        cy.xpath('//span[@cel_widget_id="UPPER-RESULT_INFO_BAR-0"]').should('be.visible');
+        cy.get('#priceRefinements').should('be.visible');
     }
 
 }
