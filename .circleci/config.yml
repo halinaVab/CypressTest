@@ -1,15 +1,17 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1
+  datadog-agent: datadog/agent@0
 workflows:
   build:
     jobs:
+      - datadog-agent/setup
       - cypress/run:
           name: Production tests
           spec: cypress/integration/amazonTests/*
           config-file: cypress_amazon.json
-          record: true
           filters:
               branches:
                 only:
                   - master
+      - datadog-agent/stop
