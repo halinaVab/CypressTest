@@ -47,4 +47,4 @@ workflows:
              - start-test-run
       - close-test-run  
           requires:
-             - cypress/run
+             - run-tests
