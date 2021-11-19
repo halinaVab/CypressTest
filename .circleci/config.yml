@@ -23,7 +23,5 @@ jobs:
 workflows:
   build:
     jobs:
-      - run-tests:
-           requires:
-             - start-test-run
+      - run-tests
        
