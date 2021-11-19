@@ -42,10 +42,10 @@ workflows:
   build:
     jobs:
       - start-test-run
-      - run-tests
+      - run-tests:
            requires:
              - start-test-run
-      - close-test-run
+      - close-test-run:
            requires:
              - run-tests
        
