@@ -1,11 +1,40 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1
-  datadog-agent: datadog/agent@0
+
+
+jobs:
+  start-test-run:
+    build:
+      docker:
+        - image: cimg/node:17.1.0
+      steps:
+        - checkout 
+        - run:
+            coomand: | 
+              npm intstall
+               runId=$(npx testrail-start-run \
+              "Testing on Circle workflow ${CIRCLE_WORKFLOW_ID}" \
+              "Cypress tests on CircleCI ${CIRCLE_BUILD_URL}")
+              echo "TestRail run id ${runId}"
+              echo ${runId} > runId.txt
+              echo "Saved file runId.txt"
+              cat runId.txt
+
+  close-test-run:
+     build:
+      docker:
+        - image: cimg/node:17.1.0
+      steps:
+        - checkout 
+        - run:
+            coomand: | 
+              npx testrail-close-run
+      
 workflows:
   build:
     jobs:
-      - datadog-agent/setup
+      - start-test-run
       - cypress/run:
           name: Production tests
           spec: cypress/integration/amazonTests/*
@@ -13,5 +42,5 @@ workflows:
           filters:
               branches:
                 only:
-                  - master
-      - datadog-agent/stop
+                  - circleciintegration
+      - close-test-run           
