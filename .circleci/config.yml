@@ -42,9 +42,6 @@ workflows:
   build:
     jobs:
       - start-test-run
-      - run-tests:
-          requires:
-             - start-test-run
+      - run-tests
       - close-test-run  
-          requires:
-             - run-tests
+       
