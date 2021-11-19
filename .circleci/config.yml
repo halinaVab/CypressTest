@@ -25,18 +25,12 @@ jobs:
             command: | 
               npm install
               npx cypress run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'
+      post-steps:
+         - run:
+             name: Close TestRail Run
+             when: always
+             command: npx testrail-close-run
           
-
-  close-test-run:
-      docker:
-        - image: cimg/node:17.1.0
-      steps:
-        - attach_workspace:
-             at: ~/
-        - run:
-            command: |
-              npm install
-              npx testrail-close-run
       
 workflows:
   build:
@@ -45,7 +39,4 @@ workflows:
       - run-tests:
            requires:
              - start-test-run
-      - close-test-run:
-           requires:
-             - run-tests
        
