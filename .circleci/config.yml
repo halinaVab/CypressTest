@@ -42,4 +42,8 @@ workflows:
               branches:
                 only:
                   - circleciintegration
-      - close-test-run           
+          requires:
+             - start-test-run
+      - close-test-run  
+          requires:
+             - cypress/run
