@@ -18,6 +18,6 @@
 // eslint-disable-next-line no-unused-vars
 
 module.exports = (on, config) => {
- require('cypress-testrail-simple/src/plugin')(on, config)
-};
+   require('cypress-testrail-simple/src/plugin')(on, config)
+}
 
