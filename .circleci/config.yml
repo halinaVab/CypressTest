@@ -19,8 +19,11 @@ jobs:
       docker:
         - image: cypress/base:14.16.0
       steps:
+        - attach_workspace:
+             at: ~/
         - run:
             command: | 
+              npm install
               npx cypress run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'
           
 
@@ -28,8 +31,11 @@ jobs:
       docker:
         - image: cimg/node:17.1.0
       steps:
+        - attach_workspace:
+             at: ~/
         - run:
             command: |
+              npm install
               npx testrail-close-run
       
 workflows:
