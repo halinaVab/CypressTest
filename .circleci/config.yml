@@ -36,7 +36,7 @@ workflows:
              - start-test-run
            post-steps:
              - run:
-               name: Close TestRail Run
-               when: always
-               command: npx testrail-close-run
+                 name: Close TestRail Run
+                 when: always
+                 command: npx testrail-close-run
        
