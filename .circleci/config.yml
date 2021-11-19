@@ -43,5 +43,9 @@ workflows:
     jobs:
       - start-test-run
       - run-tests
-      - close-test-run  
+           requires:
+             - start-test-run
+      - close-test-run
+           requires:
+             - run-tests
        
