@@ -9,7 +9,7 @@ jobs:
         - run:
             command: | 
               npm install
-              runId=$(npx testrail-start-run
+              runId=$(npx testrail-start-run)
               echo "TestRail run id ${runId}"
               echo ${runId} > runId.txt
               echo "Saved file runId.txt"
