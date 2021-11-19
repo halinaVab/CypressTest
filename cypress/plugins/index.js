@@ -18,8 +18,6 @@
 // eslint-disable-next-line no-unused-vars
 
 module.exports = (on, config) => {
-	on('task', {
-		failed: require('cypress-failed-log/src/failed')(),
-	});
+ require('cypress-testrail-simple/src/plugin')(on, config)
 };
 
