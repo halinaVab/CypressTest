@@ -9,9 +9,7 @@ jobs:
         - run:
             command: | 
               npm install
-              runId=$(npx testrail-start-run \
-              "Testing on Circle workflow ${CIRCLE_WORKFLOW_ID}" \
-              "Cypress tests on CircleCI ${CIRCLE_BUILD_URL}")
+              runId=$(npx testrail-start-run
               echo "TestRail run id ${runId}"
               echo ${runId} > runId.txt
               echo "Saved file runId.txt"
