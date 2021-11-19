@@ -11,8 +11,8 @@ jobs:
         - checkout 
         - run:
             command: | 
-              npm intstall
-               runId=$(npx testrail-start-run \
+              npm install
+              runId=$(npx testrail-start-run \
               "Testing on Circle workflow ${CIRCLE_WORKFLOW_ID}" \
               "Cypress tests on CircleCI ${CIRCLE_BUILD_URL}")
               echo "TestRail run id ${runId}"
@@ -26,7 +26,8 @@ jobs:
       steps:
         - checkout 
         - run:
-            command: | 
+            command: |
+              npm install
               npx testrail-close-run
       
 workflows:
