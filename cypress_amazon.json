@@ -1,5 +1,4 @@
 {
   "baseUrl": "https://www.amazon.com/",
-  "projectId": "c1amzq",
-   "pluginsFile": "dd-trace/cypress/plugin"
+  "projectId": "c1amzq"
 }
