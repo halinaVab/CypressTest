@@ -17,7 +17,7 @@ jobs:
               echo "Saved file runId.txt"
               cat runId.txt
   
-   run-tests:
+  run-tests:
       docker:
         - image: cypress/base:14.16.0
       steps:
