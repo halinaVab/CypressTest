@@ -15,7 +15,6 @@ jobs:
               echo "Saved file runId.txt"
               cat runId.txt
               ls -la && cat runId.txt
-              npm install
               npx cypress run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'
               npx testrail-close-run
           
