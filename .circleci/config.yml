@@ -1,9 +1,9 @@
 version: 2.1
 
-jobs:
-  start-test-run:
+jobs:         
+  run-tests:
       docker:
-        - image: cimg/node:17.1.0
+        - image: cypress/base:14.16.0
       steps:
         - checkout 
         - run:
@@ -14,15 +14,6 @@ jobs:
               echo ${runId} > runId.txt
               echo "Saved file runId.txt"
               cat runId.txt
-  
-  run-tests:
-      docker:
-        - image: cypress/base:14.16.0
-      steps:
-        - attach_workspace:
-             at: ~/
-        - run:
-            command: | 
               ls -la && cat runId.txt
               npm install
               npx cypress run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'
@@ -32,7 +23,6 @@ jobs:
 workflows:
   build:
     jobs:
-      - start-test-run
       - run-tests:
            requires:
              - start-test-run
