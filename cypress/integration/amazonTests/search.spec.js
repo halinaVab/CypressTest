@@ -6,7 +6,7 @@ describe('Amazon tests', () => {
 		cy.visit('/');
 	});
 
-	it('Test amazon Search', () => {
+	it('Test amazon Search C2', () => {
 		BasePage.search('Iphone');
 		SearchResultPage.isOnSerachResultPage();
 	});
