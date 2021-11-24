@@ -7,6 +7,7 @@ describe('Amazon tests', () => {
 	});
 
 	it('C2 Test amazon Search', () => {
+		cy.percySnapshot("Home")
 		BasePage.search('Iphone');
 		SearchResultPage.isOnSerachResultPage();
 	});
