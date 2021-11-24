@@ -11,5 +11,6 @@ describe('Amazon tests', () => {
 		cy.percySnapshot("Home")
 		BasePage.search('Iphone');
 		SearchResultPage.isOnSerachResultPage();
+		cy.percySnapshot("Search")
 	});
 });

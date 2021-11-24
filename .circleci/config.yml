@@ -4,6 +4,7 @@ jobs:
   run-amazon-tests:
       docker:
         - image: cypress/base:14.16.0
+      parallelism: 2  
       steps:
         - checkout 
         - run:
@@ -16,6 +17,8 @@ jobs:
               cat runId.txt
               ls -la && cat runId.txt
               npx percy exec -- cypress run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'
+              npx percy build:finalize -v
+              npx percy build:wait --project 3ad2d9a6/galins-demo --commit $CIRCLE_SHA1 --fail-on-changes
               npx testrail-close-run
               
   run-google-tests:
