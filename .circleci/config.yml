@@ -18,7 +18,7 @@ jobs:
               npx percy exec -- cypress run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'
               npx testrail-close-run
               
-   run-google-tests:
+  run-google-tests:
       docker:
         - image: cypress/base:14.16.0
       steps:
