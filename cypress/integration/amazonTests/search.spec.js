@@ -7,7 +7,7 @@ describe('Amazon tests', () => {
 	});
 
 	it('C2 Test amazon Search', () => {
-		//commentjjааа
+		//comment
 		cy.percySnapshot("Home")
 		BasePage.search('Android');
 		SearchResultPage.isOnSerachResultPage();
