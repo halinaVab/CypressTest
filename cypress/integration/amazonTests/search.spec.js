@@ -1,4 +1,4 @@
-import SearchResultPage from '../../page-objects/amazonPages/searchResultPage';
+eimport SearchResultPage from '../../page-objects/amazonPages/searchResultPage';
 import BasePage from '../../page-objects/amazonPages/basePage';
 
 describe('Amazon tests', () => {
@@ -7,7 +7,7 @@ describe('Amazon tests', () => {
 	});
 
 	it('C2 Test amazon Search', () => {
-		// comment
+		// commentf
 		cy.percySnapshot("Home")
 		BasePage.search('Android');
 		SearchResultPage.isOnSerachResultPage();
