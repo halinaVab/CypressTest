@@ -1,4 +1,4 @@
-import SearchResultPage from '../../page-objects/amazonPages/searchResultPage';
+eimport SearchResultPage from '../../page-objects/amazonPages/searchResultPage';
 import BasePage from '../../page-objects/amazonPages/basePage';
 
 describe('Amazon tests', () => {
@@ -7,9 +7,9 @@ describe('Amazon tests', () => {
 	});
 
 	it('C2 Test amazon Search', () => {
-		// comment1
+		// commentff
 		cy.percySnapshot("Home")
-		BasePage.search('Iphone');
+		BasePage.search('Android');
 		SearchResultPage.isOnSerachResultPage();
 	});
 });

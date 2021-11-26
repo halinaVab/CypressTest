@@ -16,7 +16,7 @@ jobs:
               cat runId.txt
               ls -la && cat runId.txt
               npx percy exec -- cypress run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'
-              npx testrail-close-run         
+              npx testrail-close-run      
           
       
 workflows:
