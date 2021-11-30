@@ -26,7 +26,7 @@ jobs:
         - run:
             command: | 
               npm install
-              npx run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'                         
+              npx cypress run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'                         
           
       
 workflows:
