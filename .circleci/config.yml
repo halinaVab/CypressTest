@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:         
-  run-amazon-tests:
+  run-visual-tests:
       docker:
         - image: cypress/base:14.16.0
       steps:
@@ -16,11 +16,33 @@ jobs:
               cat runId.txt
               ls -la && cat runId.txt
               npx percy exec -- cypress run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'
-              npx testrail-close-run         
+              npx testrail-close-run
+
+  run-tests:
+      docker:
+        - image: cypress/base:14.16.0
+      steps:
+        - checkout 
+        - run:
+            command: | 
+              npm install
+              runId=$(npx testrail-start-run)
+              echo "TestRail run id ${runId}"
+              echo ${runId} > runId.txt
+              echo "Saved file runId.txt"
+              cat runId.txt
+              ls -la && cat runId.txt
+              npx cypress run --config-file cypress_amazon.json --spec 'cypress/integration/amazonTests/**.*'          
+              npx testrail-close-run               
           
       
 workflows:
   build:
     jobs:
-      - run-amazon-tests
+      - run-tests
+      - run-visual-tests:
+          filters:
+              branches:
+                only:
+                  - main
        
