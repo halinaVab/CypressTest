@@ -40,9 +40,5 @@ workflows:
   build:
     jobs:
       - run-tests
-      - run-visual-tests:
-          filters:
-              branches:
-                only:
-                  - main
+      - run-visual-tests
        
