@@ -6,6 +6,7 @@ describe('Amazon tests', () => {
 		cy.visit('/');
 	});
 
+	//fff
 	it('C2 Test amazon Search', () => {
 		// comment17аа
 		cy.percySnapshot("Home")
