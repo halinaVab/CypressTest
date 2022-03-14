@@ -8,6 +8,7 @@ describe('Card tests', function () {
 		cy.fixture('product').as('products');
 	});
 
+	//test
 	DATA.forEach(product => {
 		it(`User is able to add  ${product.description} to the card`, function () {
 			cy.log('GIVEN User is on Acce');
