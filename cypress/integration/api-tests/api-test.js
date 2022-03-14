@@ -3,7 +3,6 @@ import Chance from 'chance';
 describe('Test for regres', () => {
 	before('', () => {});
 
-	//test1
 	let testingData = [
 		{
 			description: 'Max Values',
