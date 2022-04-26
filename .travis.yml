@@ -17,5 +17,5 @@ cache:
     - npm run cy:verify
 
 script:
-  - npm run cy:run
+  - npm run run:amazon:tests
   - kill $(jobs -p) || true
