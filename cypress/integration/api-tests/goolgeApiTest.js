@@ -1,4 +1,5 @@
 describe('Google API', () => {
+	//test
 	it('', () => {
 		cy.request(
 			'https://storage.googleapis.com/mannequin/2018/data/productwall/accessories/en_us.json?c=1571310916'

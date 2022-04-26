@@ -8,8 +8,6 @@ describe('Amazon tests', () => {
 
 	//fffff
 	it('C2 Test amazon Search', () => {
-		// comment17аа
-		cy.percySnapshot("Home")
 		BasePage.search('Iphone');
 		SearchResultPage.isOnSerachResultPage();
 	});
