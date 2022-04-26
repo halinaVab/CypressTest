@@ -16,6 +16,13 @@ cache:
     - npm ci
     - npm run cy:verify
 
-script:
-  - npm run run:amazon:tests
-  - kill $(jobs -p) || true
+jobs:
+  include:
+     - stage: Amazon tests
+       script:
+         - npm run run:amazon:tests
+         - kill $(jobs -p) || true
+     - stage: Api tests
+       script:
+         - npm run start
+         - kill $(jobs -p) || true
