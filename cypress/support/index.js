@@ -15,7 +15,6 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands';
-import '@percy/cypress';
 
 require('cypress-failed-log');
 require('cypress-xpath');
